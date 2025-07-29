@@ -6,6 +6,9 @@ const nextConfig = {
     serverComponentsExternalPackages: ['@supabase/supabase-js'],
   },
 
+  // React Strict Mode 비활성화 (hydration 오류 방지)
+  reactStrictMode: false,
+
   // 이미지 최적화 설정
   images: {
     domains: [],
