@@ -39,3 +39,28 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# testing
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# coverage
+coverage/
+*.lcov
+
+# supabase
+.supabase/
+
+# docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+
+# logs
+logs
+*.log
+
+# Optional eslint cache
+.eslintcache

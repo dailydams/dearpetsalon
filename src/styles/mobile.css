@@ -1,0 +1,107 @@
+/* 모바일 최적화 스타일 */
+
+/* 터치 타겟 최소 크기 보장 */
+@media (max-width: 768px) {
+  button, 
+  [role="button"], 
+  input[type="button"], 
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* 작은 아이콘 버튼들도 터치하기 쉽게 */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 모바일에서 호버 효과 제거 */
+  .no-hover-mobile:hover {
+    background-color: initial;
+    color: initial;
+  }
+
+  /* 스크롤 영역 개선 */
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* 입력 필드 확대 방지 */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* 모달 및 다이얼로그 최적화 */
+  [role="dialog"] {
+    margin: 8px;
+    max-height: calc(100vh - 16px);
+    width: calc(100vw - 16px);
+  }
+
+  /* 테이블 반응형 */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 카드 간격 조정 */
+  .mobile-card-spacing {
+    margin-bottom: 12px;
+  }
+
+  /* 텍스트 크기 조정 */
+  .mobile-text-adjust {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+/* 고해상도 디스플레이 최적화 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-optimize {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 가로 모드 최적화 */
+@media (max-height: 500px) and (orientation: landscape) {
+  .landscape-optimize {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  .landscape-modal {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+/* 접근성 개선 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 다크 모드 지원 준비 */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-ready {
+    /* 다크 모드 스타일은 향후 추가 */
+  }
+}
